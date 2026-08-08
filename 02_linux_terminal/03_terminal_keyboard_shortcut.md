@@ -25,3 +25,8 @@ press ```ctrl + C``` to cancel the command that is currently running
 
 #### Pause the current command
 press ```ctrl + Z``` will pause the executing command and can be resumed later by ```bg %[paused command job id]``` will resume the process
+
+## TAB key
+Tab key is used for auto completion of commands or directories. to do so type few characters that can uniquely identify your command and hit TAB, it will search in the bash history and find the command for you and auto complete this.
+
+after typing the command Press tab twice and it will show all the commands that start with the command you typed

@@ -4,10 +4,9 @@ The command history are stored in a file .bash_history or       .zsh_history on 
 
 To access the file ```echo $HISTSIZE``` and it will show the number of commands it can store on the memory.  
 
-### Run a command form history
+#### Run a command form history
 To run a command from history type ```![command number]```. And to run the last command type !!.
 
-We can run them fro reverse direction too by ```!-3``` now this will star from reverse direction and run the third last command in the history. 
 
 To run a last specified command(e.g. ls) we can type ```!ls```. Now it will run the last ls command or cd command
 
@@ -20,8 +19,13 @@ To search for a command in bash history press ```ctrl + r``` and it will enable 
 
 
 #### Removing a command from the history
-- clear entier history: ```history -c```
 - remove single one: ```history -d [line number]```
+- clear entier history: ```history -c```
 
+
+### Date time record.
+For auditing purpose we may need to see the timestamp. By default the ```history``` command will show only command line number. to activate the date time record we can use an environment variable called HISTTIMEFORMAT. We can use it like this ```HISTTIMEFORMAT="%d/%m/%y %T"```. The %d for date, %m for month, %y for year and %T for time. we can format the date time as we wish.
+
+To make this change permanent, add this environment variable to the ```.bashrc``` file, ```echo HISTTIMEFORMAT="%d/%m/%y %T" >> .bashrc```
 
 ### How to run a command and not leave any trace?
