@@ -33,3 +33,10 @@ sudo command provides temporary root power only for a single command. a non-priv
 *[Note: once a password is given, it will be cached for five minutes. The user can run sudo commands without password for that time being]*
 
 By running ```sudo -v``` a user can update cached credentials. ```sudo -k``` will remove the privilege.
+
+## Unlocking root user
+
+By default root account is locked in the linux distros. To unlock root account, a password needs to be set for the root account using command ```sudo passwd root``` then enter current user password firsh. After that gige password by typing twice.
+
+A user can change his password using the ```passwd``` command and root user can change any users password with this command
+```passwd [username]``` and type password for it.

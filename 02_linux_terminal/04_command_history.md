@@ -28,4 +28,16 @@ For auditing purpose we may need to see the timestamp. By default the ```history
 
 To make this change permanent, add this environment variable to the ```.bashrc``` file, ```echo HISTTIMEFORMAT="%d/%m/%y %T" >> .bashrc```
 
-### How to run a command and not leave any trace?
+## How to run a command and not leave any trace?
+
+To leave no trace in the history user can follow many ways. One of them is clearing the history but that is not a good approach. 
+
+By typing one whitespace in front of the command can help. If a command is run with a white space in front of it does not save the command the history. This behavior works on ubuntu. but for other distros of linux does not behave similarly. 
+
+There is a special environment variable ```HISTCONTROL``` that control the history. To check its behavior use the command ```echo $HISTCONTROL```, this will tell what is ignored. For example: ignorespace, or ignoredups or ignoreboth. To change the the behavior type ```HISTCONTROL=ignorespace``` and now a whitespace prefix command will be ignored.
+
+- ignoredups -->  ignore duplicates
+- ignorespace -->  igonre whitespace
+- ignoreboth  --> Both of them are ignored
+
+
