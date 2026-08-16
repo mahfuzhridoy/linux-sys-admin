@@ -16,3 +16,8 @@ If something that is not a file is process.
 - `/lib` contains shared library files used by different applications.
 - `/media` is used for external storage will be automatically mounted.
 - `/mnt` is like media but it's not very often used these days.
+- `/tmp` contains temporatory files. 
+- `/proc` Is a virtual directory contains information about hardware, such as cpu, memory or kernel. For exaample: `cat /proc/cpuinfo` or `cat /proc/meminfo`
+- `/usr` saves many command for initial users. 
+- `/var` stores variable and log files.
+

@@ -16,3 +16,11 @@ Removing one file with rm does not make the file inaccessable. The file is still
 #### Finding the files with same hardlink we can use the command `find ./directory/name -inum [inode-number]`
 
 The hardlink can not be used for directory and can not cross disk partition.
+
+
+# Symlinks or Softlinks
+Is a special file type stores the reference of anothe rfiles. If the file that a symlink refers to is deleted, the symlink will become useless.
+
+To create a symlink use ln with `-s` option. for example: `ln -s /etc/passwd ./passwd`.
+
+If the file that is reffered ina symlink is moved to other directory, the symlink will be broken. The symlink has its own inode structure but the hadlink share the same inode structure number.

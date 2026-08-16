@@ -20,3 +20,7 @@ STDERR has the stream number 2. We can use it to redirect error messages produce
 The pipe ```|``` takes the output of the previous command and passess to the next command. For example: ```cat file.txt | grep password | tee output.txt``` . In this example, the piping takes the input of cat command and passes it to the grep, then output of grep command again passed to the tee command. Finally the tee command shows the output in terminal and saves it to output.txt.
 
 The redirect (```>```) does not show the output in terminal but the tee command does. 
+
+## Word count (wc)
+To count the available number of lines, words, files use the command `wc file` Then we can use options: `-l` to show the line numbers, `-c` to the number of characters, and `-w` to show number of wards available on that file.
+
