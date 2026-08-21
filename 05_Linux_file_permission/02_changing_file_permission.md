@@ -31,7 +31,7 @@ To display a message we can use `-v` option with the command. And to recursively
 We can also use a file as a reference to assign its permission type to another file with the oftion `--reference=[referencefile]`.
 
 ## Numeric method for changing permission
-Another method for representing permission is to use octal or 8 based number. The number that represent the permission can be a 3 digit number from 0 to 7. 
+Another method for representing permission is to use octal or 8 based number. The number that represent the permission can be a 3 digit number from 0 to 7 or sometimes a 4 digit appended with 0 in front. If the appended digit is 0 that means the file has no special permission. 
 
 The first digit represents the permission for `owner`, second digit for `group`, and the last digit for `others` class. The r,w,x permissions have their own fixed number values.
 - Read = 4
