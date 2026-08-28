@@ -45,3 +45,6 @@ This is the combination of both ps and grep. The simple `pgrep [command]` return
 `pstree` command displays the hierarchical structure of running processes. It merges identical branches by putting them inside a square brackets and prefixing them with an integer number that identifies the number of branches.
 
 To disable the merging of identical branches `-c` option is used. The threads of a process are found under the parent process and are shown in curly braces.
+
+### pidof
+To find only PID, `pidof [process name]` command can be used. For example: `pidof firefox`. This will be helpful while seding signals to the processes using `kill` command.
