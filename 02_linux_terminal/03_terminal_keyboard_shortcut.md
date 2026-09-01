@@ -1,4 +1,4 @@
-# Linux terminal keyboard shortcut
+# Keyboard shortcut in Terminal
 
 ## Required commands for sys-admin
 
