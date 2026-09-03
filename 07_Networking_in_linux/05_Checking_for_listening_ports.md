@@ -34,7 +34,7 @@ Here in this command line:
 * `-sTCP:LISTEN` Sows only TCP port in the listening state.
 * `-nP` Show the ports and hosts in numeric format.
 
-**To see files thaat are open in a specific port:**
+**To see files that are open in a specific port:**
 > sudo lsof -iTCP:22 -sTCP:LISTEN
 Here, `-iTCP:22` option specified to port 22 only.
 
