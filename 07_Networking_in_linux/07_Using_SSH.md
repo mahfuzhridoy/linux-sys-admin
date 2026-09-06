@@ -4,7 +4,7 @@ Also know as secure shell is a network protocol used by sytem administrators to 
 The ssh involves a client and a server. An ssh client creates a secure connection to the ssh server on a remote machine, then the connection will be used to execute command on a remote server. 
 
 ### Installing SSH
-To install ssh server and client:- `sudo apt install openssh-server openssh-client`. Verifying the installation `systemctl status ssh`. This can be also verified from the processes list `ps -ef | grep ssh`
+To install ssh server and client:- `sudo apt install openssh-server openssh-client` on alma linux or RHEL `sudo apt install openssh-server openssh-clients` . Verifying the installation `systemctl status ssh`. on RHEL `systemctl status sshd`. This can be also verified from the processes list `ps -ef | grep ssh`
 
 To check if ssh is enabled `systemctl is-enabled ssh`. If its enabled then it will start when the system starts. 
 
