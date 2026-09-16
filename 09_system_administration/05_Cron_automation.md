@@ -29,11 +29,11 @@ Each task to be run has to be defined by a single line that consist of 6 fields 
 
 The first five fields respectively:
 
-1. `m` for minute
-2. `h` hour
-3. `dom` day of the month
-4. `mon` month
-5. `dow` day of the weeks
+1. `m` for minute. can have value from 0 to 59
+2. `h` hour. Can have value from 0 to 23
+3. `dom` day of the month. Can have value from 1 to 31
+4. `mon` month. can have value from 1 to 12
+5. `dow` day of the weeks. can have value from 0 to 7
 
 If a field contains *, it means any value is allowed for that field. This is different from regex * where it means everything. For example, an * in the day filed means everyday. Minimum time unit used by the cron is minute. if a task is needed to run in every second, It cannot be run using cron. 
 
@@ -52,6 +52,45 @@ Practice cronjob: A backup script should be run 1, 5, and 15th day of the month 
 ```text
     0 6 1,5,15 * * /root/backup.sh
 ```
+Ranged value
+```text
+    0 6 1-15 * * /root/backup.sh
+```
+Repeating a task through an interval. The below goven job will repeat itself every 3 days
+```text
+    0 6 */3 * * /root/backup.sh
+```
+#
+
+**Some Crontab markers:**
+1. `@yearly /script.sh` Runs the task once a year in the january first at midnight
+
+2. `@monthly /script.sh` Runs the task at the firsd day of the month in the midnight.
+
+3. `@weekly /script.sh` Runs every sunday midnight
+
+4. `@daily /script.sh` Runs It everyday midnight at the beginning of the day
+
+5. `@hourly /script.sh` Runs every hour at the start
+
+6. `@reboot /script.sh` Runs the task at boot time.
 
 #
 
+> Note: The root user can remove any users crontb with `-u` option with crontab command. To remove the logged in users crontab file `crontab -r` command is used.
+
+There are websites and GUI tools for managing cron jobs. These are [crontab Generator](https://crontab-generator.org/) and [crontab guru](https://crontab.guru/)
+
+### Restricting users
+
+Cron can restrict a user from accessing their cronjobs. The `/etc/cron.allow` specifies the allowed users and `/etc/cron.deny` specifies the denied users.
+
+## System-wide cronjobs
+
+Besides the users individual cronjobs, there are systemwide cronjobs too which are stored in `/etc` directory that will be run as root. In the etc directory there are more directories for cronjobs: cron.daily, cron.hourly, cron.monthly, cron.weekly. 
+
+Simply moving the script files onto those directories will run the script respectively.
+
+`/etc/crontab` file specifies when the script will be run
+
+> Cronjobs are intended for servers and machines that are running nonstop. If the machine is down then cronjob will not execute the job.
