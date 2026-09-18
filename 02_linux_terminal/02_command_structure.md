@@ -1,5 +1,5 @@
 # Linux Command Structure
-The linux command structue follows the command then otion after that, argument. for example: ```ping -c 1 8.8.8.8```. Here, the name of the command is ```ping```, ```-c``` is the option and ```1``` is the option value. Lastly ```8.8.8.8``` is the argument. 
+The linux command structue follows the command then option after that, argument. for example: ```ping -c 1 8.8.8.8```. Here, the name of the command is ```ping```, ```-c``` is the option and ```1``` is the option value. Lastly ```8.8.8.8``` is the argument. 
 
 *[Note: The option changes how a command behaves, while an argument specifies what the command acts upon.]* 
 

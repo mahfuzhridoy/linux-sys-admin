@@ -21,10 +21,11 @@ press ```ctrl + E``` to move the cursor to the end of the command
 press ```ctrl + U``` will clear the current command you are typing. This is useful for typing password. just pressing it will clear the password field. 
 
 #### Cancel the running command
-press ```ctrl + C``` to cancel the command that is currently running
+press ```ctrl + C``` to cancel the command that is currently running on the foreground.
 
 #### Pause the current command
-press ```ctrl + Z``` will pause the executing command and can be resumed later by ```bg %[paused command job id]``` will resume the process
+Press `Ctrl+Z` to suspend a foreground command. The suspended job can be resumed in the background with `bg %<JobID>`; use `jobs` to find the JobID. If the job is already running in the background, `Ctrl+Z` will not suspend it because it only affects the foreground job. To stop a background job, use `kill %<JobID>`, or use `fg %<JobID>` to bring it back to the foreground and then press `Ctrl+C` to terminate it. If the process is producing too much output, you can still type `kill %<JobID>` in the same terminal; no second terminal is required.
+ 
 
 ## TAB key
 Tab key is used for auto completion of commands or directories. to do so type few characters that can uniquely identify your command and hit TAB, it will search in the bash history and find the command for you and auto complete this.
